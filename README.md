@@ -4,12 +4,29 @@ allow only listed commands for particular ssh connection identified by public ke
 
 ### Example usage
 
-1. Clone git
-2. Create new ssh key for this script, authorize this ssh key on the destination host
-3. Make your own config from example ".py.conf"
-4. Run desired command via ssh
-5. Add command from log to config
+- Clone git
+<pre>
+cd /opt/
+git clone https://github.com/gelo22/restricted_shell.git
+</pre>
+- Create new ssh key on my_client_host
+<pre>
+ssh-keygen
+</pre>
+- authorize this ssh key on the destination host
+<pre>
+</pre>
+- Make your own config from example ".py.conf"
+<pre>
+</pre>
+- Run desired command via ssh
+<pre>
+</pre>
+- Add command from log to config
+<pre>
+</pre>
 
+where
 my_server_host - client(s) will connect to this host
 my_client_host - client host, which will connect to my_server_host
 my_ssh_key - public ssh key which my_client_host will use for connection to my_server_host

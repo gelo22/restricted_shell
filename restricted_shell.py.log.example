@@ -1,0 +1,3 @@
+===+===
+splited_command: ['ls', '-la', '/']
+original_command: 'ls -la /'
