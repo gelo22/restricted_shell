@@ -3,12 +3,12 @@
 allow only listed commands for particular ssh connection identified by public key
 
 ### Example usage
-
+<pre>
 my_server_host - client(s) will connect to this host
 my_client_host - client host, which will connect to my_server_host
 my_ssh_key - public ssh key which my_client_host will use for connection to my_server_host
 my_user - user, which my_client_host will use for connection to my_server_host
-
+</pre>
 - Clone git to the my_server_host
 <pre>
 cd /opt/
