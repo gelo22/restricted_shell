@@ -2,6 +2,14 @@
 
 allow only listed commands for particular ssh connection identified by public key
 
+### Ruquirements
+
+Python2 or Python3
+
+GNU/Linux
+
+Openssh
+
 ### Example usage
 <pre>
 my_server_host - client(s) will connect to this host
@@ -27,7 +35,7 @@ editor .ssh/authorized_keys
 # add ssh key like this:
 command="/opt/restricted_shell/restricted_shell.py" my_ssh_key
 </pre>
-- Make your own config from example ".py.conf" on the my_server_host
+- Make your own config from example "restricted_shell.py.conf" on the my_server_host
 <pre>
 cd /opt/restricted_shell
 cp -a restricted_shell.py.conf restricted_shell.py_my_user.conf
@@ -38,7 +46,7 @@ chown my_user:my_user restricted_shell.py_my_user.log
 - Run desired command via ssh from the my_client_host
 <pre>
 ssh my_user@my_server_host ls -la
-# you must see debug output
+# you must see debug output:
 ===+===
 splited_command: ['ls', '-la']
 original_command: 'ls -la'
@@ -67,14 +75,6 @@ editor restricted_shell.py_my_user.conf
 "debug": ""
 # and check your command again, it must works now
 </pre>
-
-### Ruquirements
-
-Python2 or Python3
-
-GNU/Linux
-
-Openssh
 
 ### Options
 
